@@ -1,0 +1,92 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "WebTikz",
+    "section": "",
+    "text": "This is a website on using Tikz extension with Quarto. The following topics are covered:"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#adding-tikz-extension",
+    "href": "index.html#adding-tikz-extension",
+    "title": "WebTikz",
+    "section": "1 Adding Tikz extension",
+    "text": "1 Adding Tikz extension\n\ninstall danmackinlay extension on project folder. Run the code below using Terminal.\nquarto add danmackinlay/quarto_tikz\nthis will install the extension under the _extensions subdirectory. Check using directory command ls.\ninclude in yaml\nfilters: \n  - tikz\ncreate a code block with class .tikz\n```tikz"
+  },
+  {
+    "objectID": "index.html#minimal-tikz",
+    "href": "index.html#minimal-tikz",
+    "title": "WebTikz",
+    "section": "2 Minimal TikZ",
+    "text": "2 Minimal TikZ\n\\usetikzlibrary{arrows.meta}\n\\begin{tikzpicture}\n  \\draw [help lines] (0,0) grid (5,4);\n  % draw axes\n  \\draw[-&gt;] (0,0) -- (5.2,0) node[right]{$x$};\n  \\draw[-&gt;] (0,0) -- (0,4.2) node[above]{$y$};\n  \n  % draw rectangle\n  \\draw [very thick,red] (1,1) rectangle (3,2);\n  \n  %draw point\n  \\node[fill, circle, blue] at (5,4) {};\n  \n  % draw arrow line\n  \\draw [-Stealth,thick, shorten &gt;=2mm] (3,2) -- (5,4);\n\\end{tikzpicture}"
+  },
+  {
+    "objectID": "draw/draw1.html",
+    "href": "draw/draw1.html",
+    "title": "tikz Drawings",
+    "section": "",
+    "text": "These drawings are best done as nodes, edges and shapes.\n\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}\n\n\n\\begin{tikzpicture}\n[every node/.style={draw, circle}]\n{\n\\node (A) at (0,0) {A}; \n\\node (B) at (2,0) {B};\n\\node (D) at (4,0) {D};\n\\node (C) at (2,-2) {C};\n\\draw (A) edge[-&gt;] node[draw=none, above]{1} (B);\n\\draw (B) edge[-&gt;] node[draw=none, above]{1} (D);\n\\draw (A) edge[-&gt;] node[draw=none, below]{2} (C);\n\\draw (C) edge[-&gt;] node[draw=none, below]{3} (D);\n\\end{tikzpicture}",
+    "crumbs": [
+      "Draw",
+      "draw1"
+    ]
+  },
+  {
+    "objectID": "draw/draw1.html#tikzdraw",
+    "href": "draw/draw1.html#tikzdraw",
+    "title": "tikz Drawings",
+    "section": "",
+    "text": "\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}",
+    "crumbs": [
+      "Draw",
+      "draw1"
+    ]
+  },
+  {
+    "objectID": "draw/draw1.html#tikz-drawings",
+    "href": "draw/draw1.html#tikz-drawings",
+    "title": "tikz Drawings",
+    "section": "",
+    "text": "\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}",
+    "crumbs": [
+      "Draw",
+      "draw1"
+    ]
+  },
+  {
+    "objectID": "draw/draw1.html#boxes-and-edges",
+    "href": "draw/draw1.html#boxes-and-edges",
+    "title": "tikz Drawings",
+    "section": "",
+    "text": "These drawings are best done as nodes, edges and shapes.\n\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}\n\n\n\\begin{tikzpicture}\n[every node/.style={draw, circle}]\n{\n\\node (A) at (0,0) {A}; \n\\node (B) at (2,0) {B};\n\\node (D) at (4,0) {D};\n\\node (C) at (2,-2) {C};\n\\draw (A) edge[-&gt;] node[draw=none, above]{1} (B);\n\\draw (B) edge[-&gt;] node[draw=none, above]{1} (D);\n\\draw (A) edge[-&gt;] node[draw=none, below]{2} (C);\n\\draw (C) edge[-&gt;] node[draw=none, below]{3} (D);\n\\end{tikzpicture}",
+    "crumbs": [
+      "Draw",
+      "draw1"
+    ]
+  },
+  {
+    "objectID": "plots/plots1.html#tikz-plots-without-pgfplots",
+    "href": "plots/plots1.html#tikz-plots-without-pgfplots",
+    "title": "tikz Plots",
+    "section": "2 Tikz Plots without pgfPlots",
+    "text": "2 Tikz Plots without pgfPlots\n\\tikz{\n\\draw[thick, lightgray] (-4,-1) grid (4,5);\n\\draw[&lt;-&gt;] (-4.5,0) -- (4.5,0) node[right] {$x$};\n\\draw[&lt;-&gt;] (0,-1.5) -- (0,5.5) node[above] {$y$};\n\n\\begin{scope}[rotate=-30]\n   \\clip (-4,-1) rectangle (4,5);\n   \\draw[domain=-4:4, variable=\\x, sample=50, smooth,\n   blue,very thick] plot ({\\x},{(\\x)^2});\n\\end{scope} \n}"
+  },
+  {
+    "objectID": "plots/plot1.html#tikz-plots-without-pgfplots",
+    "href": "plots/plot1.html#tikz-plots-without-pgfplots",
+    "title": "tikz Plots",
+    "section": "2 Tikz Plots without pgfPlots",
+    "text": "2 Tikz Plots without pgfPlots\n\\tikz{\n\\draw[thick, lightgray] (-4,-1) grid (4,5);\n\\draw[&lt;-&gt;] (-4.5,0) -- (4.5,0) node[right] {$x$};\n\\draw[&lt;-&gt;] (0,-1.5) -- (0,5.5) node[above] {$y$};\n\n\\begin{scope}[rotate=-30]\n   \\clip (-4,-1) rectangle (4,5);\n   \\draw[domain=-4:4, variable=\\x, sample=50, smooth,\n   blue,very thick] plot ({\\x},{(\\x)^2});\n\\end{scope} \n}",
+    "crumbs": [
+      "Plots",
+      "plot1"
+    ]
+  }
+]
