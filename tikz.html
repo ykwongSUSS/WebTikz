@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>WebTikz</title>
+<title>Tikz – WebTikz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./tikz.html" rel="next">
+<link href="./draw/draw1.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Tikz</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Tikz</a></li><li class="breadcrumb-item"><a href="./tikz.html">tikz</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./index.html" class="sidebar-item-text sidebar-link active">
+            <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tikz</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -118,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tikz.html" class="sidebar-item-text sidebar-link">
+  <a href="./tikz.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">tikz</span></a>
   </div>
 </li>
@@ -185,17 +186,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#websites" id="toc-websites" class="nav-link active" data-scroll-target="#websites"><span class="header-section-number">1</span> Websites:</a></li>
-  <li><a href="#quarto-notes" id="toc-quarto-notes" class="nav-link" data-scroll-target="#quarto-notes"><span class="header-section-number">2</span> Quarto Notes</a></li>
+  <li><a href="#adding-tikz-extension" id="toc-adding-tikz-extension" class="nav-link active" data-scroll-target="#adding-tikz-extension"><span class="header-section-number">1</span> Adding Tikz extension</a></li>
+  <li><a href="#minimal-tikz" id="toc-minimal-tikz" class="nav-link" data-scroll-target="#minimal-tikz"><span class="header-section-number">2</span> <strong>Minimal TikZ</strong></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Tikz</a></li><li class="breadcrumb-item"><a href="./tikz.html">tikz</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">WebTikz</h1>
+<h1 class="title">Tikz</h1>
 </div>
 
 
@@ -218,31 +219,28 @@ ul.task-list li input[type="checkbox"] {
 <li>plots</li>
 <li>graphs</li>
 </ol>
-<section id="websites" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="websites"><span class="header-section-number">1</span> Websites:</h2>
+<section id="adding-tikz-extension" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="adding-tikz-extension"><span class="header-section-number">1</span> Adding Tikz extension</h2>
 <ol type="1">
-<li><a href="http://ykwongSUSS.github.io/">WebQ</a>: github.io</li>
-<li><a href="http://ykwongSUSS.github.io/WebR/">WebR</a>: R Basics</li>
-<li><a href="http://ykwongSUSS.github.io/WebJ/">WebJ</a>: Julia Basics</li>
-<li><a href="http://ykwongSUSS.github.io/WebTikz/">WebTikz</a>: Tikz Basics</li>
-<li><a href="http://ykwongwebstats.netlify.app/">ykwongWebStats</a>: Mathematical Statistics with R</li>
-<li><a href="http://ykwongwebnpar.netlify.app/">ykwongWebNPar</a>: NonParametric Statistics with R</li>
-<li><a href="http://ykwongwebsurv.netlify.app/">ykwongWebSurv</a>: Survival Analysis with R</li>
-<li><a href="http://ykwongwebla.netlify.app/">ykwongWebLA</a>: Linear Algebra with Julia</li>
+<li><p>install&nbsp;<code>danmackinlay</code>&nbsp;extension on project folder. Run the code below using&nbsp;<code>Terminal</code>.</p>
+<pre><code>quarto add danmackinlay/quarto_tikz</code></pre>
+<p>this will install the extension under the _extensions subdirectory. Check using directory command&nbsp;<code>ls.</code></p></li>
+<li><p>include in yaml</p>
+<pre><code>filters: 
+  - tikz</code></pre></li>
+<li><p>create a code block with class&nbsp;<code>.tikz</code></p>
+<pre><code>```tikz</code></pre></li>
 </ol>
 </section>
-<section id="quarto-notes" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="quarto-notes"><span class="header-section-number">2</span> Quarto Notes</h2>
-<ol type="1">
-<li><a href="https://ykwongSUSS.github.io/notes/yaml.html">yaml</a>: html, pdf</li>
-<li><a href="https://ykwongSUSS.github.io/notes/qmd.html">qmd</a>: md in Quarto</li>
-<li><a href="https://ykwongSUSS.github.io/notes/R.html">R</a>: R in Quarto</li>
-<li><a href="https://ykwongSUSS.github.io/notes/julia.html">julia</a>: Julia in Quarto</li>
-<li><a href="https://ykwongSUSS.github.io/notes/tex.html">tex</a>: TeX in Quarto</li>
-<li><a href="https://ykwongSUSS.github.io/notes/tikz.html">tikz extension</a>: Tikz in Quarto</li>
-<li><a href="https://ykwongSUSS.github.io/notes/graphviz.html">graphviz</a>: Graphviz</li>
-<li><a href="http://ykwongSUSS.github.io/notes/version">version</a>: how to version</li>
-</ol>
+<section id="minimal-tikz" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="minimal-tikz"><span class="header-section-number">2</span> <strong>Minimal TikZ</strong></h2>
+<pre><code>\begin{tikzpicture}
+  \draw [help lines] (0,0) grid (5,4);
+  \draw [very thick,red] (1,1) rectangle (3,2);
+  \node[fill, circle, blue] at (5,4) {};
+  \draw (3,2) -- (5,4);
+\end{tikzpicture}</code></pre>
+<img src="tikz_files/mediabag/65833051ca54b04f7989fbeb8566d3348e798bde.svg" class="img-fluid">
 
 
 </section>
@@ -649,10 +647,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Tikz">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tikz</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./tikz.html" class="pagination-link" aria-label="tikz">
-        <span class="nav-page-text">tikz</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./draw/draw1.html" class="pagination-link" aria-label="draw1">
+        <span class="nav-page-text">draw1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
