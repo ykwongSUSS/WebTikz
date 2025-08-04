@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#boxes-and-edges" id="toc-boxes-and-edges" class="nav-link active" data-scroll-target="#boxes-and-edges"><span class="header-section-number">1</span> Boxes and Edges</a></li>
+  <li><a href="#nodes-and-edges" id="toc-nodes-and-edges" class="nav-link active" data-scroll-target="#nodes-and-edges"><span class="header-section-number">1</span> Nodes and Edges</a></li>
   </ul>
 </nav>
     </div>
@@ -247,8 +247,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="boxes-and-edges" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="boxes-and-edges"><span class="header-section-number">1</span> Boxes and Edges</h2>
+<section id="nodes-and-edges" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="nodes-and-edges"><span class="header-section-number">1</span> Nodes and Edges</h2>
 <p>These drawings are best done as nodes, edges and shapes.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>\begin{tikzpicture} %-- style definitions</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},</span>
@@ -277,18 +277,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <img src="draw1_files/mediabag/fe3825d5847212ac9eae1dece4de7d4d8e243e71.svg" class="img-fluid">
 <hr>
 <div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>\begin{tikzpicture}</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[every node/.style={draw, circle}]</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>\node (A) at (0,0) {A}; </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>\node (B) at (2,0) {B};</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>\node (D) at (4,0) {D};</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>\node (C) at (2,-2) {C};</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>\draw (A) edge[-&gt;] node[draw=none, above]{1} (B);</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>\draw (B) edge[-&gt;] node[draw=none, above]{1} (D);</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>\draw (A) edge[-&gt;] node[draw=none, below]{2} (C);</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>\draw (C) edge[-&gt;] node[draw=none, below]{3} (D);</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>\end{tikzpicture}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<img src="draw1_files/mediabag/60baffbc99fa5f3d0d79b5ac406e013527e552d6.svg" class="img-fluid">
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>%\draw [help lines] (0,0) grid (6,4);</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>[nd/.style={draw, circle, thick, minimum size=1.5cm, font=\bfseries},</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>rect/.style={draw, rectangle, minimum height=1cm, minimum width=1.8cm}]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>\node[nd, fill=cyan!40] (A) at (1,4) {nodeA}; </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>\node[nd, fill=yellow!40] (B) at (1,1) {B}; </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>\node[nd, fill=white] (C) at (5,2.5) {C};</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>\node[rect, fill=red!30] (D) at (10,2.5) {D};</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>\draw (A) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{13} (C);</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>\draw (B) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{12} (C);</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>\draw (C) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{11} (D);</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>\end{tikzpicture}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<img src="draw1_files/mediabag/423415dcb186f3dc2d0a05dc046263e279f12408.svg" class="img-fluid">
 
 
 </section>

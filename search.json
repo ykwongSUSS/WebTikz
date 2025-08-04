@@ -41,7 +41,7 @@
     "href": "draw/draw1.html",
     "title": "tikz Drawings",
     "section": "",
-    "text": "These drawings are best done as nodes, edges and shapes.\n\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}\n\n\n\\begin{tikzpicture}\n[every node/.style={draw, circle}]\n{\n\\node (A) at (0,0) {A}; \n\\node (B) at (2,0) {B};\n\\node (D) at (4,0) {D};\n\\node (C) at (2,-2) {C};\n\\draw (A) edge[-&gt;] node[draw=none, above]{1} (B);\n\\draw (B) edge[-&gt;] node[draw=none, above]{1} (D);\n\\draw (A) edge[-&gt;] node[draw=none, below]{2} (C);\n\\draw (C) edge[-&gt;] node[draw=none, below]{3} (D);\n\\end{tikzpicture}",
+    "text": "These drawings are best done as nodes, edges and shapes.\n\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}\n\n\n\\begin{tikzpicture}\n%\\draw [help lines] (0,0) grid (6,4);\n[nd/.style={draw, circle, thick, minimum size=1.5cm, font=\\bfseries},\nrect/.style={draw, rectangle, minimum height=1cm, minimum width=1.8cm}]\n{\n\\node[nd, fill=cyan!40] (A) at (1,4) {nodeA}; \n\\node[nd, fill=yellow!40] (B) at (1,1) {B}; \n\\node[nd, fill=white] (C) at (5,2.5) {C};\n\\node[rect, fill=red!30] (D) at (10,2.5) {D};\n\n\\draw (A) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{13} (C);\n\\draw (B) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{12} (C);\n\\draw (C) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{11} (D);\n}\n\\end{tikzpicture}",
     "crumbs": [
       "Drawings",
       "draw1"
@@ -149,6 +149,28 @@
     "text": "2 Quarto Notes\n\nyaml: html, pdf\nqmd: md in Quarto\nR: R in Quarto\njulia: Julia in Quarto\ntex: TeX in Quarto\ntikz extension: Tikz in Quarto\ngraphviz: Graphviz\nversion: how to version",
     "crumbs": [
       "Tikz"
+    ]
+  },
+  {
+    "objectID": "graph/graph1.html",
+    "href": "graph/graph1.html",
+    "title": "Graphs",
+    "section": "",
+    "text": "\\begin{tikzpicture}\n[every node/.style={draw, circle}]\n{\n\\node (A) at (0,0) {A}; \n\\node (B) at (2,0) {B};\n\\node (D) at (4,0) {D};\n\\node (C) at (2,-2) {C};\n\\draw (A) edge[-&gt;] node[draw=none, above]{1} (B);\n\\draw (B) edge[-&gt;] node[draw=none, above]{1} (D);\n\\draw (A) edge[-&gt;] node[draw=none, below]{2} (C);\n\\draw (C) edge[-&gt;] node[draw=none, below]{3} (D);\n\\end{tikzpicture}",
+    "crumbs": [
+      "Graphs",
+      "graph1"
+    ]
+  },
+  {
+    "objectID": "draw/draw1.html#nodes-and-edges",
+    "href": "draw/draw1.html#nodes-and-edges",
+    "title": "tikz Drawings",
+    "section": "",
+    "text": "These drawings are best done as nodes, edges and shapes.\n\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}\n\n\n\\begin{tikzpicture}\n%\\draw [help lines] (0,0) grid (6,4);\n[nd/.style={draw, circle, thick, minimum size=1.5cm, font=\\bfseries},\nrect/.style={draw, rectangle, minimum height=1cm, minimum width=1.8cm}]\n{\n\\node[nd, fill=cyan!40] (A) at (1,4) {nodeA}; \n\\node[nd, fill=yellow!40] (B) at (1,1) {B}; \n\\node[nd, fill=white] (C) at (5,2.5) {C};\n\\node[rect, fill=red!30] (D) at (10,2.5) {D};\n\n\\draw (A) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{13} (C);\n\\draw (B) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{12} (C);\n\\draw (C) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{11} (D);\n}\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "draw1"
     ]
   }
 ]
