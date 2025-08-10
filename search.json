@@ -179,5 +179,16 @@
     "title": "tikz Plots",
     "section": "2 Tikz Plots without pgfPlots",
     "text": "2 Tikz Plots without pgfPlots\n\\tikz{\n\\draw[thick, lightgray] (-4,-1) grid (4,5);\n\\draw[&lt;-&gt;] (-4.5,0) -- (4.5,0) node[right] {$x$};\n\\draw[&lt;-&gt;] (0,-1.5) -- (0,5.5) node[above] {$y$};\n\n\\begin{scope}[rotate=-30]\n   \\clip (-4,-1) rectangle (4,5);\n   \\draw[domain=-4:4, variable=\\x, sample=50, smooth,\n   blue,very thick] plot ({\\x},{(\\x)^2});\n\\end{scope} \n}"
+  },
+  {
+    "objectID": "nodesEdges.html",
+    "href": "nodesEdges.html",
+    "title": "Nodes and Edges",
+    "section": "",
+    "text": "\\usetikzlibrary{shapes}\n\\begin{tikzpicture}\n\n% grid guide\n\\draw [help lines](0,0) grid (8,8);\n\n% 1. node default \n\\node [draw] (A) at (1,3){};\n\n% 2, node point and label (outside)\n\\node [circle, fill, label=b] (B) at (2,1){};\n  \n% 3. node circle inside label\n\\node [draw,circle] (C) at (3,2){C};\n\n% 4. node default and outside label\n\\node [draw, fill=orange, label=d] (D) at (4,4){};\n\n% 5. node with ellipse label\n\\node [draw, thick, ellipse, minimum width=1.5cm, minimum height=3cm, label=e] (E) at (6,4){R};\n\n% 6. draw line with arrow\n\\draw [-&gt;] (B) --  (C);\n\n% 7. edge with weights\n\\draw [-&gt;] (C) edge node[right]{8} (D);\n \n% 8. edge bending with  to\n\\draw [-&gt;](D) to [bend right] (E);\n\n\\end{tikzpicture}",
+    "crumbs": [
+      "Tikz",
+      "nodesEdges"
+    ]
   }
 ]
