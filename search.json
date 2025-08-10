@@ -172,5 +172,12 @@
       "Drawings",
       "draw1"
     ]
+  },
+  {
+    "objectID": "plot1.html#tikz-plots-without-pgfplots",
+    "href": "plot1.html#tikz-plots-without-pgfplots",
+    "title": "tikz Plots",
+    "section": "2 Tikz Plots without pgfPlots",
+    "text": "2 Tikz Plots without pgfPlots\n\\tikz{\n\\draw[thick, lightgray] (-4,-1) grid (4,5);\n\\draw[&lt;-&gt;] (-4.5,0) -- (4.5,0) node[right] {$x$};\n\\draw[&lt;-&gt;] (0,-1.5) -- (0,5.5) node[above] {$y$};\n\n\\begin{scope}[rotate=-30]\n   \\clip (-4,-1) rectangle (4,5);\n   \\draw[domain=-4:4, variable=\\x, sample=50, smooth,\n   blue,very thick] plot ({\\x},{(\\x)^2});\n\\end{scope} \n}"
   }
 ]

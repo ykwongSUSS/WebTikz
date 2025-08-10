@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tikz – WebTikz</title>
+<title>Nodes and Edges – WebTikz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./nodesEdges.qmd" rel="next">
-<link href="./index.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -83,7 +81,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Tikz</a></li><li class="breadcrumb-item"><a href="./tikz.html">tikz</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      WebTikz
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">WebTikz</a> 
+      <a href="../">WebTikz</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./index.html" class="sidebar-item-text sidebar-link">
+            <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tikz</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -119,13 +119,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tikz.html" class="sidebar-item-text sidebar-link active">
+  <a href="../tikz.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">tikz</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nodesEdges.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../nodesEdges.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">nodesEdges</span></a>
   </div>
 </li>
@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./draw/draw1.html" class="sidebar-item-text sidebar-link">
+  <a href="../draw/draw1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">draw1</span></a>
   </div>
 </li>
@@ -159,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./plots/plot1.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/plot1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">plot1</span></a>
   </div>
 </li>
@@ -176,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./graph/graph1.html" class="sidebar-item-text sidebar-link">
+  <a href="../graph/graph1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">graph1</span></a>
   </div>
 </li>
@@ -187,22 +187,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#adding-tikz-extension" id="toc-adding-tikz-extension" class="nav-link active" data-scroll-target="#adding-tikz-extension"><span class="header-section-number">1</span> Adding Tikz extension</a></li>
-  <li><a href="#minimal-tikz" id="toc-minimal-tikz" class="nav-link" data-scroll-target="#minimal-tikz"><span class="header-section-number">2</span> <strong>Minimal TikZ</strong></a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Tikz</a></li><li class="breadcrumb-item"><a href="./tikz.html">tikz</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tikz</h1>
+<h1 class="title">Nodes and Edges</h1>
 </div>
 
 
@@ -219,37 +212,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a website on using Tikz extension with Quarto. The following topics are covered:</p>
-<ol type="1">
-<li>drawings</li>
-<li>plots</li>
-<li>graphs</li>
-</ol>
-<section id="adding-tikz-extension" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="adding-tikz-extension"><span class="header-section-number">1</span> Adding Tikz extension</h2>
-<ol type="1">
-<li><p>install&nbsp;<code>danmackinlay</code>&nbsp;extension on project folder. Run the code below using&nbsp;<code>Terminal</code>.</p>
-<pre><code>quarto add danmackinlay/quarto_tikz</code></pre>
-<p>this will install the extension under the _extensions subdirectory. Check using directory command&nbsp;<code>ls.</code></p></li>
-<li><p>include in yaml</p>
-<pre><code>filters: 
-  - tikz</code></pre></li>
-<li><p>create a code block with class&nbsp;<code>.tikz</code></p>
-<pre><code>```tikz</code></pre></li>
-</ol>
-</section>
-<section id="minimal-tikz" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="minimal-tikz"><span class="header-section-number">2</span> <strong>Minimal TikZ</strong></h2>
-<pre><code>\begin{tikzpicture}
-  \draw [help lines] (0,0) grid (5,4);
-  \draw [very thick,red] (1,1) rectangle (3,2);
-  \node[fill, circle, blue] at (5,4) {};
-  \draw (3,2) -- (5,4);
-\end{tikzpicture}</code></pre>
-<img src="tikz_files/mediabag/65833051ca54b04f7989fbeb8566d3348e798bde.svg" class="img-fluid">
+<img src="nodesEdges_files/mediabag/e66ac54bc4e4c962cf41cdf0c9898185f96b9ba8.svg" class="img-fluid">
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -651,18 +616,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Tikz">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tikz</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./nodesEdges.qmd" class="pagination-link" aria-label="nodesEdges">
-        <span class="nav-page-text">nodesEdges</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
