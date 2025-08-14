@@ -219,5 +219,16 @@
       "Drawings",
       "draw2"
     ]
+  },
+  {
+    "objectID": "graph/graph2.html",
+    "href": "graph/graph2.html",
+    "title": "GraphLib",
+    "section": "",
+    "text": "\\usetikzlibrary{graphs, graphs.standard, quotes}\n   % quotes library is for the [\"\"] edges\n\\begin{tikzpicture}[node distance = {4cm and 3cm}, v/.style = {draw, circle}]\n  \\graph[nodes={circle, draw}, grow right=4cm, branch down=3cm]{\n    A -- [\"1\"] C -- [\"3\"] E,\n    B -- [\"1\",swap] D -- [\"4\",swap] F,\n    B -- [\"2\"] A,\n    C -- [\"2\"] {D,B},\n    D -- [\"3\",swap] E -- [\"1\"] F\n  };\n\\end{tikzpicture}",
+    "crumbs": [
+      "Graphs",
+      "graph2"
+    ]
   }
 ]
