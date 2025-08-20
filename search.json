@@ -230,5 +230,93 @@
       "Graphs",
       "graph2"
     ]
+  },
+  {
+    "objectID": "draw/flowchart.html",
+    "href": "draw/flowchart.html",
+    "title": "tikz Drawings",
+    "section": "",
+    "text": "These drawings are best done as nodes, edges and shapes.\n\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}\n\n\n\\begin{tikzpicture}\n%\\draw [help lines] (0,0) grid (6,4);\n[nd/.style={draw, circle, thick, minimum size=1.5cm, font=\\bfseries},\nrect/.style={draw, rectangle, minimum height=1cm, minimum width=1.8cm}]\n{\n\\node[nd, fill=cyan!40] (A) at (1,4) {nodeA}; \n\\node[nd, fill=yellow!40] (B) at (1,1) {B}; \n\\node[nd, fill=white] (C) at (5,2.5) {C};\n\\node[rect, fill=red!30] (D) at (10,2.5) {D};\n\n\\draw (A) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{13} (C);\n\\draw (B) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{12} (C);\n\\draw (C) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{11} (D);\n}\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "flowchart"
+    ]
+  },
+  {
+    "objectID": "draw/flowchart.html#flowchart",
+    "href": "draw/flowchart.html#flowchart",
+    "title": "tikz Drawings",
+    "section": "",
+    "text": "These drawings are best done as nodes, edges and shapes.\n\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}\n\n\n\\begin{tikzpicture}\n%\\draw [help lines] (0,0) grid (6,4);\n[nd/.style={draw, circle, thick, minimum size=1.5cm, font=\\bfseries},\nrect/.style={draw, rectangle, minimum height=1cm, minimum width=1.8cm}]\n{\n\\node[nd, fill=cyan!40] (A) at (1,4) {nodeA}; \n\\node[nd, fill=yellow!40] (B) at (1,1) {B}; \n\\node[nd, fill=white] (C) at (5,2.5) {C};\n\\node[rect, fill=red!30] (D) at (10,2.5) {D};\n\n\\draw (A) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{13} (C);\n\\draw (B) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{12} (C);\n\\draw (C) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{11} (D);\n}\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "flowchart"
+    ]
+  },
+  {
+    "objectID": "draw/venn.html",
+    "href": "draw/venn.html",
+    "title": "tikz Drawings 2",
+    "section": "",
+    "text": "\\begin{tikzpicture}\n\\usetikzlibrary{shapes}\n%\\draw [help lines] (0,0) grid (8,6);\n{\n% ellipses\n\\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=S] (e1) at (2,3){};\n\\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=F] (e2) at (6,3){}\n\n%points and edges\n\\node [circle,fill,label=$x1$] (x1) at (2,3.5);\n\\node [fill,label=$y1$] (y1) at (6,3.5);\n\\draw [-&gt;,-latex, thick](x1) to [bend left] node[above]{$f$} (y1);\n\n\\node [circle,fill,label=$x2$] (x2) at (2,2.5);\n\\node [fill,label=$y2$] (y2) at (6,2.5);\n\\draw [-&gt;,-latex,thick](x2) to [bend right] node[below]{$g$} (y2);\n}\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "venn"
+    ]
+  },
+  {
+    "objectID": "draw/venn.html#function-diagram",
+    "href": "draw/venn.html#function-diagram",
+    "title": "tikz Drawings 2",
+    "section": "",
+    "text": "\\begin{tikzpicture}\n\\usetikzlibrary{shapes}\n%\\draw [help lines] (0,0) grid (8,6);\n{\n% ellipses\n\\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=S] (e1) at (2,3){};\n\\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=F] (e2) at (6,3){}\n\n%points and edges\n\\node [circle,fill,label=$x1$] (x1) at (2,3.5);\n\\node [fill,label=$y1$] (y1) at (6,3.5);\n\\draw [-&gt;,-latex, thick](x1) to [bend left] node[above]{$f$} (y1);\n\n\\node [circle,fill,label=$x2$] (x2) at (2,2.5);\n\\node [fill,label=$y2$] (y2) at (6,2.5);\n\\draw [-&gt;,-latex,thick](x2) to [bend right] node[below]{$g$} (y2);\n}\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "venn"
+    ]
+  },
+  {
+    "objectID": "draw/function.html",
+    "href": "draw/function.html",
+    "title": "Function",
+    "section": "",
+    "text": "\\begin{tikzpicture}\n\\usetikzlibrary{shapes}\n%\\draw [help lines] (0,0) grid (8,6);\n{\n% ellipses\n\\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=S] (e1) at (2,3){};\n\\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=F] (e2) at (6,3){}\n\n%points and edges\n\\node [circle,fill,label=$x1$] (x1) at (2,3.5);\n\\node [fill,label=$y1$] (y1) at (6,3.5);\n\\draw [-&gt;,-latex, thick](x1) to [bend left] node[above]{$f$} (y1);\n\n\\node [circle,fill,label=$x2$] (x2) at (2,2.5);\n\\node [fill,label=$y2$] (y2) at (6,2.5);\n\\draw [-&gt;,-latex,thick](x2) to [bend right] node[below]{$g$} (y2);\n}\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "function"
+    ]
+  },
+  {
+    "objectID": "draw/function.html#function-diagram",
+    "href": "draw/function.html#function-diagram",
+    "title": "Function",
+    "section": "",
+    "text": "\\begin{tikzpicture}\n\\usetikzlibrary{shapes}\n%\\draw [help lines] (0,0) grid (8,6);\n{\n% ellipses\n\\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=S] (e1) at (2,3){};\n\\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=F] (e2) at (6,3){}\n\n%points and edges\n\\node [circle,fill,label=$x1$] (x1) at (2,3.5);\n\\node [fill,label=$y1$] (y1) at (6,3.5);\n\\draw [-&gt;,-latex, thick](x1) to [bend left] node[above]{$f$} (y1);\n\n\\node [circle,fill,label=$x2$] (x2) at (2,2.5);\n\\node [fill,label=$y2$] (y2) at (6,2.5);\n\\draw [-&gt;,-latex,thick](x2) to [bend right] node[below]{$g$} (y2);\n}\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "function"
+    ]
+  },
+  {
+    "objectID": "draw/flowchart.html#nodes-and-edges",
+    "href": "draw/flowchart.html#nodes-and-edges",
+    "title": "FlowChart",
+    "section": "",
+    "text": "These drawings are best done as nodes, edges and shapes.\n\\begin{tikzpicture} %-- style definitions\n  [nd/.style={draw, thick, minimum width=2cm, minimum height=1cm},\n  lbl/.style={yshift=2mm},\n  e/.style={red,fill=white}]\n  \n  % node 1\n  \\node[nd, fill=yellow!40] (webQ) at (1,5.5){WebQ};\n  \\node[lbl] at (webQ.north west) {qmd};\n  \n  % node 2\n  \\node[nd, fill=yellow!40] (qSite) at (1,1.5){qSite};\n  \\node[lbl] at (qSite.north west) {html};\n  \\draw (webQ) edge[-&gt;] node[e]{render}(qSite);\n \n   % node 3\n  \\node[nd, fill=cyan!20] (ghDesk) at (6,1.5){ghDesk};\n  \\node[lbl] at (ghDesk.north west) {html};\n  \\draw (qSite) edge[-&gt;] node[e]{rsync}(ghDesk);\n  \n  % node 4\n  \\node[nd, fill=orange!20] (github) at (9,5.5){github};\n  \\node[lbl] at (github.north west) {html};\n  \\draw (ghDesk) edge[-&gt;] node[e]{commit}(github);   \n\\end{tikzpicture}\n\n\n\\begin{tikzpicture}\n%\\draw [help lines] (0,0) grid (6,4);\n[nd/.style={draw, circle, thick, minimum size=1.5cm, font=\\bfseries},\nrect/.style={draw, rectangle, minimum height=1cm, minimum width=1.8cm}]\n{\n\\node[nd, fill=cyan!40] (A) at (1,4) {nodeA}; \n\\node[nd, fill=yellow!40] (B) at (1,1) {B}; \n\\node[nd, fill=white] (C) at (5,2.5) {C};\n\\node[rect, fill=red!30] (D) at (10,2.5) {D};\n\n\\draw (A) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{13} (C);\n\\draw (B) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{12} (C);\n\\draw (C) edge[-&gt;, thick] node[draw=none, above, yshift=1mm]{11} (D);\n}\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "flowchart"
+    ]
+  },
+  {
+    "objectID": "draw/venn.html#venn-diagram",
+    "href": "draw/venn.html#venn-diagram",
+    "title": "Venn",
+    "section": "",
+    "text": "\\begin{tikzpicture}\n\\usetikzlibrary{shapes}\n%\\draw [help lines] (0,0) grid (8,6);\n{\n\\draw [help lines] (0,0) grid (8,8);\n \n\\draw [fill=green!20, fill opacity=0.3](3,5) circle(1.5); \n\\draw [fill=yellow!20,fill opacity=0.3](5,5) circle(1.5);\n\\draw [fill=red!20,fill opacity=0.3](4,3) circle(1.5);   \n}\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "venn"
+    ]
   }
 ]
