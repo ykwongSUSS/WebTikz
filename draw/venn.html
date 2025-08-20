@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tikz Drawings 2 – WebTikz</title>
+<title>Venn – WebTikz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -245,7 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#function-diagram" id="toc-function-diagram" class="nav-link active" data-scroll-target="#function-diagram"><span class="header-section-number">1</span> Function Diagram</a></li>
+  <li><a href="#venn-diagram" id="toc-venn-diagram" class="nav-link active" data-scroll-target="#venn-diagram"><span class="header-section-number">1</span> Venn Diagram</a></li>
   </ul>
 </nav>
     </div>
@@ -254,7 +254,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../draw/flowchart.html">Drawings</a></li><li class="breadcrumb-item"><a href="../draw/venn.html">venn</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">tikz Drawings 2</h1>
+<h1 class="title">Venn</h1>
 </div>
 
 
@@ -271,27 +271,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="function-diagram" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="function-diagram"><span class="header-section-number">1</span> Function Diagram</h2>
+<section id="venn-diagram" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="venn-diagram"><span class="header-section-number">1</span> Venn Diagram</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>\begin{tikzpicture}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>\usetikzlibrary{shapes}</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>%\draw [help lines] (0,0) grid (8,6);</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>% ellipses</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=S] (e1) at (2,3){};</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>\node [draw, ellipse, thick, minimum width=1.5cm, minimum height=3cm, label=F] (e2) at (6,3){}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>%points and edges</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>\node [circle,fill,label=$x1$] (x1) at (2,3.5);</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>\node [fill,label=$y1$] (y1) at (6,3.5);</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>\draw [-&gt;,-latex, thick](x1) to [bend left] node[above]{$f$} (y1);</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>\node [circle,fill,label=$x2$] (x2) at (2,2.5);</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>\node [fill,label=$y2$] (y2) at (6,2.5);</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>\draw [-&gt;,-latex,thick](x2) to [bend right] node[below]{$g$} (y2);</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>\end{tikzpicture}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<img src="venn_files/mediabag/bb79e57a30381f12f1cc009ecde038e25d18d19b.svg" class="img-fluid">
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>\draw [help lines] (0,0) grid (8,8);</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>\draw [fill=green!20, fill opacity=0.3](3,5) circle(1.5); </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>\draw [fill=yellow!20,fill opacity=0.3](5,5) circle(1.5);</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>\draw [fill=red!20,fill opacity=0.3](4,3) circle(1.5);   </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>\end{tikzpicture}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<img src="venn_files/mediabag/b6daa062e57444a8903916c51baa273747229cf0.svg" class="img-fluid">
 
 
 </section>
