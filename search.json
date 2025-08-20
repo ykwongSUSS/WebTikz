@@ -318,5 +318,16 @@
       "Drawings",
       "venn"
     ]
+  },
+  {
+    "objectID": "draw/venn.html#venn-diagram-1",
+    "href": "draw/venn.html#venn-diagram-1",
+    "title": "Venn",
+    "section": "2 Venn Diagram",
+    "text": "2 Venn Diagram\n\\begin{tikzpicture}\n[nd/.style={draw, circle, minimum height=1.5cm}]\n\\node[nd, fill=green!20](a) at (2,2){A};\n\\node[nd, fill=yellow!20](a) at (3,3.5){B};\n\\node[nd, fill=red!20](a) at (4,2){C};\n\\draw [help lines](0,0) grid (6,5);\n\\end{tikzpicture}",
+    "crumbs": [
+      "Drawings",
+      "venn"
+    ]
   }
 ]
